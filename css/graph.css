@@ -1,0 +1,8 @@
+
+#controls .actions {
+	float:right;
+}
+
+#controls .actions .button .icon {
+	display:inline-block;
+}
