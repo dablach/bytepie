@@ -53,7 +53,7 @@ function renderFolder($node,$level,$a,$totalSize,$_,$parentId) {
 		echo $pathTag;
 		if($level == 0) {
 			if($_['root']->getId() == $node->getId()) {
-				echo '<image x="-7" y="-9" width="32" height="32" transform="scale(0.25)" preserveAspectRatio="xMidYMid meet" xlink:href="'.$_['urlGenerator']->imagePath('bytepie','home.svg').'" />';
+				echo '<image x="-12" y="-12" width="24" height="24" transform="scale(0.25)" preserveAspectRatio="xMidYMid meet" xlink:href="'.$_['urlGenerator']->imagePath('bytepie','home.svg').'" />';
 			} else {
 				echo '<text x="0" y="0" text-anchor="middle" style="pointer-events:none;"><tspan>'.$node->getName().'</tspan><tspan dy="1.2em" x="0">'.human_filesize($node->getSize()).'</tspan></text>';
 			}
@@ -66,7 +66,7 @@ function renderFolder($node,$level,$a,$totalSize,$_,$parentId) {
 <div id="controls">
 	<div class="breadcrumb">
 		<div class="crumb">
-			<a href="<?= $_['urlGenerator']->linkToRoute('bytepie.graph.index',['zoom' => $_['zoom']]) ?>"><img src="<?= $_['urlGenerator']->imagePath('bytepie','home.svg') ?>" /></a>
+			<a href="<?= $_['urlGenerator']->linkToRoute('bytepie.graph.index',['zoom' => $_['zoom']]) ?>"><img src="<?= $_['urlGenerator']->imagePath('bytepie','home.svg') ?>" width="16" height="16" /></a>
 		</div>
 		<?php $path = ''; foreach(array_filter(explode('/',$_['root']->getRelativePath($_['folder']->getPath()))) as $segment) { $path .= ($path ? '/' : '').$segment; ?>
 			<div class="crumb">
